@@ -1,2 +1,2 @@
-# ImageProcessing
-Projects from an image processing course taken at UofT in spring of 2015
+# Prokudin-Gorskii Project
+This code will extract 3 grayscale images and combine them to create a color photo and was completed in spring, 2015.
