@@ -1,0 +1,13 @@
+The Prokudin-Gorskii Colour Photo Collection Project 
+Emma DaPonte
+
+The image data for this project is an image containing three negatives of the same photo, as taken through a blue, green, and red filter. The images have slightly varying sizes.
+
+The three negative photos can be extracted and combined to create a color photo. Unfortunately, the photos are not perfectly aligned after extraction, so we must use either their sum of squared differences or their normalized cross-correlation to determine how to displace them for optimal alignment. 
+
+In almost all cases, the normalized cross-correlation found the best displacement and led to the clearest images. There were some cases where both techniques led to the same displacement and thus both worked effectively, however, there were no cases where using the sum of squared differences produced a better alignment.
+
+There were also artifacts in many of the processed images, which are explained by pre-existing impurities in one of the original negatives. 
+
+Due to the nature of the matching process between the negatives, run times can be, and were, extremely lengthy for larger images. For this reason, images above a certain size are automatically scaled down into smaller parts; the original's displacement is determined by multiplying those displacement values found for the smaller parts by the percentage the original was shrunk by. This technique led to run-times similar to the processing of smaller images. 
+Just as for the smaller images, using the normalized cross-product led to more exact matches for the larger images.
